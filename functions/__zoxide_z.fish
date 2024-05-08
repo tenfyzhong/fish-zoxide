@@ -1,5 +1,12 @@
 # Jump to a directory using only keywords.
 function __zoxide_z
+    __zoxide_check || return $status
+
+    if test -z $__zoxide_z_prefix
+        set __zoxide_z_prefix 'z!'
+    end
+    set __zoxide_z_prefix_regex ^(string escape --style=regex $__zoxide_z_prefix)
+
     set -l argc (count $argv)
     if test $argc -eq 0
         __zoxide_cd $HOME
