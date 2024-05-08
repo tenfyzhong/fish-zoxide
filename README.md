@@ -15,7 +15,7 @@ fisher install tenfyzhong/fish-zoxide
 The `zoxide init` command provide some flags to config the zoxide.   
 But using this plugin, you do not need to add the config `zoxide init fish | source` to your config file anymore.  
 In order to support the `zoxide init` feature, I made a function name `__zoxide_init` to make the same things.  
-The function support the same flags with `zoxide init`:  
+The function support the same flags with `zoxide init`, the flags of the command `zoxide` can find in this page [flags](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#flags):  
 - `--cmd`
   - Changes the prefix of the z and zi commands.
   - `--cmd j` would change the commands to (`j`, `ji`).
